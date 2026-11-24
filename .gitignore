@@ -1,0 +1,15 @@
+reference/
+__pycache__/
+*.pyc
+.envrc
+src/komugi/**/*.c
+src/build/
+build/
+*.so
+
+# local run data
+runs/
+experiments/
+
+packages/engine/dist/
+packages/engine/node_modules/

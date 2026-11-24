@@ -1,0 +1,16 @@
+{
+  "name": "komugi-oracle",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Deterministic generator for the gungi.js golden corpus under tests/engine/goldens (KOM-101 G1). Never part of the CI gate or flake.nix.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "generate": "node oracle.mjs"
+  },
+  "dependencies": {
+    "gungi.js": "3.4.11"
+  }
+}

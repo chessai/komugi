@@ -1,0 +1,391 @@
+[
+  {
+    "name": "advanced-start",
+    "request": {
+      "id": "advanced-start",
+      "fen": "9/9/9/9/9/9/9/9/9 M1G1I1J2W2N3R2S2F2D4C1A2K1T1/m1g1i1j2w2n3r2s2f2d4c1a2k1t1 w 3 wb 1",
+      "sims": 16
+    },
+    "reply": {
+      "id": "advanced-start",
+      "san": "新帥(8-6-1)",
+      "action": 32871,
+      "stamp": "absent",
+      "stats": {
+        "playouts": 16,
+        "evaluations": 17,
+        "nodes": 17,
+        "rootWdl": [
+          0.40152454376220703,
+          0.24001407623291016,
+          0.3584613800048828
+        ],
+        "q": 0.04306316375732422,
+        "tactical": {
+          "providerId": "game-marshal-capture-v1",
+          "rootWitness": null,
+          "refuted": [],
+          "overridden": null,
+          "providerCalls": 0,
+          "candidateTransitions": 0,
+          "skippedReason": "draft",
+          "truncated": false
+        },
+        "ms": 0,
+        "model_sha256": null,
+        "sims": 16,
+        "draftmin": 10,
+        "discovery": "on",
+        "mlh": "0.05/0.8/0.9/32",
+        "deadlineHit": false
+      }
+    }
+  },
+  {
+    "name": "walk-10",
+    "request": {
+      "id": "walk-10",
+      "fen": "6j|g:i:j|m/9/9/9/9/9/6J|G:I:J|M/9/9 W2N3R2S2F2D4C1A2K1T1/w2n3r2s2f2d4c1a2k1t1 w 3 wb 6",
+      "history": [
+        "新帥(7-1-1)",
+        "新帥(1-1-1)",
+        "新大(7-2-1)",
+        "新大(1-2-1)",
+        "新中(7-2-2)付",
+        "新中(1-2-2)付",
+        "新小(7-2-3)付",
+        "新小(1-2-3)付",
+        "新小(7-3-1)",
+        "新小(1-3-1)"
+      ],
+      "sims": 16
+    },
+    "reply": {
+      "id": "walk-10",
+      "san": "新侍(8-4-1)",
+      "action": 33521,
+      "stamp": "present",
+      "stats": {
+        "playouts": 16,
+        "evaluations": 17,
+        "nodes": 17,
+        "rootWdl": [
+          0.387151239067316,
+          0.14632741808891297,
+          0.466521342843771
+        ],
+        "q": -0.07937010377645498,
+        "tactical": {
+          "providerId": "game-marshal-capture-v1",
+          "rootWitness": null,
+          "refuted": [],
+          "overridden": null,
+          "providerCalls": 0,
+          "candidateTransitions": 0,
+          "skippedReason": "draft",
+          "truncated": false
+        },
+        "ms": 0,
+        "model_sha256": null,
+        "sims": 16,
+        "draftmin": 10,
+        "discovery": "on",
+        "mlh": "0.05/0.8/0.9/32",
+        "deadlineHit": false
+      }
+    }
+  },
+  {
+    "name": "walk-40",
+    "request": {
+      "id": "walk-40",
+      "fen": "1d|d:d:d||s:f:f||r:r:s||n:n:n||j:w:w||g:i:j|m/9/9/9/9/9/1D|D:D:D||S:F:F||R:R:S||N:N:N||J:W:W||G:I:J|M/9/9 C1A2K1T1/c1a2k1t1 w 3 wb 21",
+      "history": [
+        "新帥(7-1-1)",
+        "新帥(1-1-1)",
+        "新大(7-2-1)",
+        "新大(1-2-1)",
+        "新中(7-2-2)付",
+        "新中(1-2-2)付",
+        "新小(7-2-3)付",
+        "新小(1-2-3)付",
+        "新小(7-3-1)",
+        "新小(1-3-1)",
+        "新侍(7-3-2)付",
+        "新侍(1-3-2)付",
+        "新侍(7-3-3)付",
+        "新侍(1-3-3)付",
+        "新槍(7-4-1)",
+        "新槍(1-4-1)",
+        "新槍(7-4-2)付",
+        "新槍(1-4-2)付",
+        "新槍(7-4-3)付",
+        "新槍(1-4-3)付",
+        "新馬(7-5-1)",
+        "新馬(1-5-1)",
+        "新馬(7-5-2)付",
+        "新馬(1-5-2)付",
+        "新忍(7-5-3)付",
+        "新忍(1-5-3)付",
+        "新忍(7-6-1)",
+        "新忍(1-6-1)",
+        "新砦(7-6-2)付",
+        "新砦(1-6-2)付",
+        "新砦(7-6-3)付",
+        "新砦(1-6-3)付",
+        "新兵(7-7-1)",
+        "新兵(1-7-1)",
+        "新兵(7-7-2)付",
+        "新兵(1-7-2)付",
+        "新兵(7-7-3)付",
+        "新兵(1-7-3)付",
+        "新兵(7-8-1)",
+        "新兵(1-8-1)"
+      ],
+      "sims": 16
+    },
+    "reply": {
+      "id": "walk-40",
+      "san": "新砲(8-5-1)",
+      "action": 34492,
+      "stamp": "present",
+      "stats": {
+        "playouts": 16,
+        "evaluations": 17,
+        "nodes": 17,
+        "rootWdl": [
+          0.3288168054212292,
+          0.33010196685791016,
+          0.34108122772086064
+        ],
+        "q": -0.012264422299631428,
+        "tactical": {
+          "providerId": "game-marshal-capture-v1",
+          "rootWitness": null,
+          "refuted": [],
+          "overridden": null,
+          "providerCalls": 0,
+          "candidateTransitions": 0,
+          "skippedReason": "draft",
+          "truncated": false
+        },
+        "ms": 0,
+        "model_sha256": null,
+        "sims": 16,
+        "draftmin": 10,
+        "discovery": "on",
+        "mlh": "0.05/0.8/0.9/32",
+        "deadlineHit": false
+      }
+    }
+  },
+  {
+    "name": "walk-70",
+    "request": {
+      "id": "walk-70",
+      "fen": "1Tds|r:r:s||n:n:n||j:w:w||g:i:j|m/1|t:d||d:d||f:f|5/|k:K|aa6/1c7/9/9/A|D:C:A||D:D:D||S:F:F||R:R:S||N:N:N||J:W:W||G:I:J|M/9/9 -/- w 3 - 36",
+      "history": [
+        "新帥(7-1-1)",
+        "新帥(1-1-1)",
+        "新大(7-2-1)",
+        "新大(1-2-1)",
+        "新中(7-2-2)付",
+        "新中(1-2-2)付",
+        "新小(7-2-3)付",
+        "新小(1-2-3)付",
+        "新小(7-3-1)",
+        "新小(1-3-1)",
+        "新侍(7-3-2)付",
+        "新侍(1-3-2)付",
+        "新侍(7-3-3)付",
+        "新侍(1-3-3)付",
+        "新槍(7-4-1)",
+        "新槍(1-4-1)",
+        "新槍(7-4-2)付",
+        "新槍(1-4-2)付",
+        "新槍(7-4-3)付",
+        "新槍(1-4-3)付",
+        "新馬(7-5-1)",
+        "新馬(1-5-1)",
+        "新馬(7-5-2)付",
+        "新馬(1-5-2)付",
+        "新忍(7-5-3)付",
+        "新忍(1-5-3)付",
+        "新忍(7-6-1)",
+        "新忍(1-6-1)",
+        "新砦(7-6-2)付",
+        "新砦(1-6-2)付",
+        "新砦(7-6-3)付",
+        "新砦(1-6-3)付",
+        "新兵(7-7-1)",
+        "新兵(1-7-1)",
+        "新兵(7-7-2)付",
+        "新兵(1-7-2)付",
+        "新兵(7-7-3)付",
+        "新兵(1-7-3)付",
+        "新兵(7-8-1)",
+        "新兵(1-8-1)",
+        "新砲(7-8-2)付",
+        "新砲(1-8-2)付",
+        "新弓(7-8-3)付",
+        "新弓(1-8-3)付",
+        "新弓(7-9-1)",
+        "新弓(1-9-1)",
+        "新筒(7-9-2)付",
+        "新筒(1-9-2)付",
+        "新謀(7-9-3)付終",
+        "新謀(1-9-3)付終",
+        "謀(7-9-3)(6-8-1)",
+        "謀(1-9-3)(2-8-1)",
+        "謀(6-8-1)(5-9-1)",
+        "筒(1-9-2)(3-9-1)",
+        "謀(5-9-1)(4-8-1)",
+        "弓(1-9-1)(3-8-1)",
+        "謀(4-8-1)(3-9-2)付",
+        "弓(1-8-3)(3-7-1)",
+        "謀(3-9-2)(2-8-2)付",
+        "砲(1-8-2)(4-8-1)",
+        "謀(2-8-2)(1-9-1)",
+        "兵(1-8-1)(2-8-2)付",
+        "謀(1-9-1)(2-9-1)",
+        "兵(1-7-3)(2-7-1)",
+        "謀(2-9-1)(1-8-1)",
+        "兵(1-7-2)(2-7-2)付",
+        "筒(7-9-2)(5-9-1)",
+        "砦(1-6-3)(2-6-1)",
+        "筒(5-9-1)(3-9-2)付",
+        "砦(1-6-2)(2-6-2)付"
+      ],
+      "sims": 16
+    },
+    "reply": {
+      "id": "walk-70",
+      "san": "忍(7-5-3)(9-3-1)",
+      "action": 4776,
+      "stamp": "present",
+      "stats": {
+        "playouts": 16,
+        "evaluations": 17,
+        "nodes": 17,
+        "rootWdl": [
+          0.29833221435546875,
+          0.30877376727294176,
+          0.3928940183715895
+        ],
+        "q": -0.09456180401612074,
+        "tactical": {
+          "providerId": "game-marshal-capture-v1",
+          "rootWitness": null,
+          "refuted": [],
+          "overridden": null,
+          "providerCalls": 0,
+          "candidateTransitions": 4258,
+          "skippedReason": null,
+          "truncated": false
+        },
+        "ms": 0,
+        "model_sha256": null,
+        "sims": 16,
+        "draftmin": 10,
+        "discovery": "on",
+        "mlh": "0.05/0.8/0.9/32",
+        "deadlineHit": false
+      }
+    }
+  },
+  {
+    "name": "rules-ligungi",
+    "request": {
+      "id": "rules-ligungi",
+      "fen": "9/9/9/9/9/9/9/9/9 M1G1I1J2W2N3R2S2F2D4C1A2K1T1/m1g1i1j2w2n3r2s2f2d4c1a2k1t1 w 3 wb 1",
+      "sims": 16,
+      "rules": "ligungi"
+    },
+    "reply": {
+      "id": "rules-ligungi",
+      "san": "新帥(8-6-1)",
+      "action": 32871,
+      "stamp": "absent",
+      "stats": {
+        "playouts": 16,
+        "evaluations": 17,
+        "nodes": 17,
+        "rootWdl": [
+          0.40152454376220703,
+          0.24001407623291016,
+          0.3584613800048828
+        ],
+        "q": 0.04306316375732422,
+        "tactical": {
+          "providerId": "game-marshal-capture-v1",
+          "rootWitness": null,
+          "refuted": [],
+          "overridden": null,
+          "providerCalls": 0,
+          "candidateTransitions": 0,
+          "skippedReason": "draft",
+          "truncated": false
+        },
+        "ms": 0,
+        "model_sha256": null,
+        "sims": 16,
+        "draftmin": 10,
+        "discovery": "on",
+        "mlh": "0.05/0.8/0.9/32",
+        "deadlineHit": false,
+        "rules": "ligungi"
+      }
+    }
+  },
+  {
+    "name": "fast-predicted-reply",
+    "request": {
+      "id": "fast-predicted-reply",
+      "fen": "8m/9/9/9/9/9/8M/9/9 G1I1J2W2N3R2S2F2D4C1A2K1T1/g1i1j2w2n3r2s2f2d4c1a2k1t1 w 3 wb 2",
+      "history": [
+        "新帥(7-1-1)",
+        "新帥(1-1-1)"
+      ],
+      "sims": 16,
+      "batch": 4
+    },
+    "reply": {
+      "id": "fast-predicted-reply",
+      "san": "新大(8-2-1)",
+      "action": 33037,
+      "stamp": "present",
+      "stats": {
+        "playouts": 16,
+        "evaluations": 17,
+        "nodes": 17,
+        "rootWdl": [
+          0.30188281786249715,
+          0.28136634826660156,
+          0.4167508338709013
+        ],
+        "q": -0.11486801600840413,
+        "tactical": {
+          "providerId": "game-marshal-capture-v1",
+          "rootWitness": null,
+          "refuted": [],
+          "overridden": null,
+          "providerCalls": 0,
+          "candidateTransitions": 0,
+          "skippedReason": "draft",
+          "truncated": false
+        },
+        "ms": 0,
+        "model_sha256": null,
+        "sims": 16,
+        "draftmin": 10,
+        "discovery": "on",
+        "mlh": "0.05/0.8/0.9/32",
+        "deadlineHit": false
+      },
+      "predictedReply": {
+        "action": 32969,
+        "san": "新大(1-7-1)"
+      }
+    }
+  }
+]

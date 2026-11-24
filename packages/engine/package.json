@@ -1,0 +1,44 @@
+{
+  "name": "@komugi-ai/engine",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "repository": { "type": "git", "url": "git+https://github.com/chessai/komugi.git", "directory": "packages/engine" },
+  "publishConfig": { "access": "public" },
+  "engines": { "node": ">=20.0.0" },
+  "files": ["dist", "bin", "docs", "README.md", "LICENSE", "NOTICE"],
+  "bin": { "engine": "./bin/komugi-assets.mjs" },
+  "sideEffects": ["./dist/worker.js"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./rules": {
+      "types": "./dist/rules.d.ts",
+      "default": "./dist/rules.js"
+    },
+    "./worker": {
+      "types": "./dist/worker.d.ts",
+      "default": "./dist/worker.js"
+    },
+    "./client": {
+      "types": "./dist/client.d.ts",
+      "default": "./dist/client.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "peerDependencies": {
+    "onnxruntime-web": "^1.31.0"
+  },
+  "peerDependenciesMeta": {
+    "onnxruntime-web": { "optional": true }
+  },
+  "scripts": {
+    "test": "node --test $(ls test/*.test.ts | grep -v '^test/bench\\.test\\.ts$')",
+    "test:full": "KOM_FULL_REGRESSION=1 node --test 'test/*.test.ts'",
+    "test:pack": "node --test 'test/pack/*.test.ts'",
+    "build": "tsc -p tsconfig.json",
+    "typecheck:strict": "tsc -p tsconfig.strict.json"
+  }
+}

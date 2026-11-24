@@ -1,0 +1,33 @@
+{
+  "gungi_js_version": "3.4.11",
+  "seed": 20260812,
+  "counts": {
+    "intro": {
+      "games": 5,
+      "plies": 707
+    },
+    "beginner": {
+      "games": 5,
+      "plies": 791
+    },
+    "intermediate": {
+      "games": 3,
+      "plies": 511
+    },
+    "advanced": {
+      "games": 3,
+      "plies": 669
+    },
+    "betray": {
+      "games": 121,
+      "plies": 223,
+      "games_played": 1200,
+      "betray_legal_plies": 223,
+      "chosen_betray": 223
+    }
+  },
+  "fen_roundtrip": 2666,
+  "generated_by": "scripts/oracle/oracle.mjs",
+  "generator_sha256_betray": "96fce827b7725ba34f3709852d74183d5e7dd25c66f632225cc14ab566a9754f",
+  "betray_generated_by": "scripts/oracle/oracle.mjs --seed 20260812 --games betray=1200 (2026-09-04; the four legacy playouts + fen_roundtrip predate the script and are unchanged)"
+}

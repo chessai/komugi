@@ -1,0 +1,8 @@
+# python 3.13.18
+# numpy 2.4.4
+# torch 2.11.0
+252c7581f44c00142113512061e81cbbec59cc0fde6ecc306315f5a2dae65613  move_records.jsonl
+c3913325cf8bc059c62bd1e9a4f6266e6167528c8e903aac7d1817fc96a268a0  pairwise.json
+08bb5d03c6a0af00c35a2ba1aa74c19451935b462bb568b91a85ae545f93d124  parity.jsonl
+c2aba2c0affedd79cbe64a1ed6744f4785a7e7c4fcabe89120dd5db615f9d76c  rules_cases.json
+00b0a1e03485c299bd2e8aa91b0988b7c5280a0b0d956ef7cd7c0914fa4a6e88  search.json

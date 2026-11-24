@@ -1,0 +1,5 @@
+# KOM-1196 F12: the committed golden fixtures are gzip-compressed binary
+# content with a fixed, mtime-0 header (the fixture regeneration script). -text keeps
+# autocrlf (or any other line-ending normalization) from ever touching their
+# bytes, on any platform this repo is cloned on.
+packages/engine/test/fixtures/** -text

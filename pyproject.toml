@@ -1,0 +1,76 @@
+[build-system]
+requires = ["setuptools>=68", "cython>=3.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "komugi"
+version = "0.0.1"
+description = "komugi: typed, Cython-accelerated rewrite of the v1 engine"
+requires-python = ">=3.11"
+
+[tool.mypy]
+strict = true
+files = ["src/komugi", "tests", "stubs"]
+exclude = '(^reference/|^build/|^docs/)'
+# stubs/ holds hand-written stubs for third-party packages that ship no types
+# (Cython). The stub for the compiled komugi._probe lives next to the .pyx it
+# describes (src/komugi/_probe.pyi): a second `komugi` package tree under
+# stubs/ would collide with src/komugi as a duplicate module name here.
+mypy_path = ["stubs"]
+
+[[tool.mypy.overrides]]
+# Reserved for the v1 copy-over: legacy modules land here untyped and get
+# tightened ticket by ticket. Empty today.
+module = "komugi.legacy.*"
+disallow_untyped_defs = false
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+# The v1 pure-Python rules engine, copied over verbatim (KOM-001a). Its
+# behaviour is frozen, so it cannot be annotated into strict-cleanliness here;
+# the two flags below are the intended end state, and ignore_errors is the
+# blanket that makes the verbatim copy land. v1 trips strict on bare generics
+# (`list`, `dict[str]`-less annotations), incomplete defs, and a handful of
+# genuine union-attr sites (e.g. move_gen._create_move iterating an
+# Optional[list]). Tighten module by module, then drop ignore_errors.
+module = "komugi.engine.*"
+disallow_untyped_defs = false
+check_untyped_defs = true
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+# The v1 engine test suites, also copied verbatim (KOM-001a): unannotated
+# defs throughout, calling the untyped engine surface above. Same deal --
+# frozen now, tightened when the engine is. tests/engine/conftest.py is new
+# komugi code, not a v1 copy, so it stays under strict.
+module = [
+    "test_api",
+    "test_fen",
+    "test_move_gen",
+    "test_cyboard",
+    "test_cymovegen",
+    "test_cyengine",
+    "test_cygame",
+    "test_action_encoding",
+    "test_observation",
+    "test_gamestate",
+    "test_start_mode",
+    "test_pickle",
+]
+ignore_errors = true
+
+[[tool.mypy.overrides]]
+module = ["setuptools", "setuptools.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests", "tools"]
+# KOM-236. The gate sandbox runs ci/check.sh with no CUDA,
+# single-threaded BLAS and no room for the bridge's spawned subprocesses; a
+# fixed set of tests fails there and passes outside it. They carry the marker
+# below, and ci/check.sh deselects it when KOMUGI_GATE_SANDBOX=1 -- so the
+# sandbox skips exactly that set and nothing else, while an ordinary local or
+# CI run (the variable unset) still runs every one of them.
+markers = [
+    "sandbox_unsafe: cannot pass in the gate sandbox (no CUDA, single-threaded BLAS, no bridge subprocess); deselected when KOMUGI_GATE_SANDBOX=1",
+]

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/chessai/komugi/schemas/models-index.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["schemaVersion", "recommended", "models"],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "recommended": { "type": "object", "additionalProperties": { "type": "string" },
+      "propertyNames": { "enum": ["intro", "beginner", "intermediate", "advanced"] } },
+    "models": { "type": "object", "additionalProperties": {
+      "type": "object", "additionalProperties": false,
+      "required": ["card", "onnxSha256"],
+      "properties": { "card": { "type": "string", "pattern": "^[A-Za-z0-9._-]+$" },
+                       "onnxSha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" } } } }
+  }
+}

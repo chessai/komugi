@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "noEmit": true,
+    "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "noUncheckedSideEffectImports": true,
+    "skipLibCheck": true,
+    "types": [],
+    "paths": {
+      "@komugi-ai/engine": ["../../dist/index.d.ts"],
+      "@komugi-ai/engine/rules": ["../../dist/rules.d.ts"],
+      "@komugi-ai/engine/worker": ["../../dist/worker.d.ts"],
+      "@komugi-ai/engine/client": ["../../dist/client.d.ts"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}

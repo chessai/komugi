@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/chessai/komugi/schemas/model-card.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["id", "campaign", "iteration", "step", "compatibilityKey",
+               "modesTrained", "assets", "sourceCheckpoint", "exportOpset",
+               "exportParity", "evalPointers", "license", "createdAt"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^komugi-[a-z0-9]+-s[0-9]+-[0-9a-f]{8}$" },
+    "campaign": { "type": "string", "minLength": 1 },
+    "iteration": { "type": "integer", "minimum": 0 },
+    "step": { "type": "integer", "minimum": 0 },
+    "compatibilityKey": {
+      "type": "object", "additionalProperties": false,
+      "required": ["planeMapVersion", "actionEncodingVersion", "rulesProfile", "architectureTag"],
+      "properties": {
+        "planeMapVersion": { "enum": [3, 4] },
+        "actionEncodingVersion": { "type": "integer", "minimum": 1 },
+        "rulesProfile": { "enum": ["komugi", "gungijs", "ligungi"] },
+        "architectureTag": { "type": "string", "pattern": "^b[0-9]+c[0-9]+$" }
+      }
+    },
+    "modesTrained": { "type": "array", "minItems": 1,
+      "items": { "enum": ["intro", "beginner", "intermediate", "advanced"] } },
+    "assets": { "type": "object", "additionalProperties": false,
+      "required": ["pt", "onnx"],
+      "properties": { "pt": { "$ref": "#/$defs/asset" }, "onnx": { "$ref": "#/$defs/asset" } } },
+    "sourceCheckpoint": { "type": "object", "additionalProperties": false,
+      "required": ["name", "sha256"],
+      "properties": { "name": { "type": "string", "pattern": "^[A-Za-z0-9._-]+$" },
+                       "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" } } },
+    "exportOpset": { "type": "integer", "minimum": 1 },
+    "exportParity": { "type": "object", "additionalProperties": false,
+      "required": ["n", "maxAbsDelta", "atol", "rtol"],
+      "properties": { "n": { "type": "integer", "minimum": 1 },
+                       "maxAbsDelta": { "type": "number", "minimum": 0 },
+                       "atol": { "type": "number", "minimum": 0 },
+                       "rtol": { "type": "number", "minimum": 0 } } },
+    "evalPointers": { "type": "array", "items": { "type": "string" } },
+    "license": { "const": "MIT, Copyright (c) 2026 chessai" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  },
+  "$defs": { "asset": { "type": "object", "additionalProperties": false,
+    "required": ["path", "sha256"],
+    "properties": { "path": { "type": "string", "pattern": "^[A-Za-z0-9._-]+$" },
+                     "sha256": { "type": "string", "pattern": "^[0-9a-f]{64}$" },
+                     "bytes": { "type": "integer", "minimum": 1 } } } }
+}

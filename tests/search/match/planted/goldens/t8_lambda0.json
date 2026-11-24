@@ -1,0 +1,107 @@
+{
+  "generated_at_commit": "6c28f7271103a2f4fae7785ad1b851786de31efb",
+  "note": "bias-free search (no SubtreeValueBias call sites at this commit)",
+  "fixtures": {
+    "t1_first": {
+      "table": [
+        [
+          1.0,
+          1.0
+        ],
+        [
+          -1.0,
+          -1.0
+        ]
+      ],
+      "logits": [
+        0.0,
+        1.0
+      ],
+      "playouts": 48,
+      "action": 0,
+      "root_weights": [
+        45.0,
+        3.0
+      ],
+      "evals_used": 3
+    },
+    "asym": {
+      "table": [
+        [
+          0.5,
+          -0.2,
+          0.1
+        ],
+        [
+          -0.6,
+          0.9,
+          0.4
+        ],
+        [
+          -0.3,
+          0.7,
+          -0.8
+        ]
+      ],
+      "logits": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "playouts": 48,
+      "action": 0,
+      "root_weights": [
+        45.0,
+        2.0,
+        1.0
+      ],
+      "evals_used": 4
+    },
+    "div1": {
+      "table": [
+        [
+          0.9,
+          0.8
+        ],
+        [
+          -0.9,
+          -0.8
+        ]
+      ],
+      "logits": [
+        0.0,
+        1.0
+      ],
+      "playouts": 48,
+      "action": 0,
+      "root_weights": [
+        45.0,
+        3.0
+      ],
+      "evals_used": 3
+    },
+    "div2": {
+      "table": [
+        [
+          0.9,
+          0.8
+        ],
+        [
+          -0.9,
+          -0.8
+        ]
+      ],
+      "logits": [
+        0.0,
+        2.0
+      ],
+      "playouts": 48,
+      "action": 0,
+      "root_weights": [
+        35.0,
+        13.0
+      ],
+      "evals_used": 3
+    }
+  }
+}

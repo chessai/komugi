@@ -1,0 +1,6 @@
+# Artifacts of `python src/komugi/build_ext.py build_ext --inplace` (ci/check.sh).
+# cythonize writes the generated C next to the .pyx and --inplace drops the
+# compiled extension there too, so both land inside the package tree.
+komugi/*.c
+komugi/*.so
+build/

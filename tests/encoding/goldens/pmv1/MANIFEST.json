@@ -1,0 +1,26 @@
+{
+  "generated_at_commit": "29213f2fa40675de9b3986af464730c5927a18d3",
+  "command": "scripts/goldens/gen_pmv1_fixture.py tests/engine/goldens tests/encoding/goldens/pmv1",
+  "files": {
+    "pmv1_intro.npz": {
+      "games": 5,
+      "plies": 707,
+      "samples": 10
+    },
+    "pmv1_beginner.npz": {
+      "games": 5,
+      "plies": 791,
+      "samples": 10
+    },
+    "pmv1_intermediate.npz": {
+      "games": 3,
+      "plies": 511,
+      "samples": 6
+    },
+    "pmv1_advanced.npz": {
+      "games": 3,
+      "plies": 669,
+      "samples": 6
+    }
+  }
+}

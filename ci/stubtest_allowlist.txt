@@ -1,0 +1,29 @@
+# Cython-generated module attributes that have no place in a hand-written stub.
+# Which of these exist depends on what the .pyx declares (cdef classes, api
+# functions, doctests), so ci/check.sh passes --ignore-unused-allowlist.
+komugi\._probe\.__pyx_capi__
+komugi\._probe\.__test__
+komugi\._probe\.__reduce_cython__
+komugi\._probe\.__setstate_cython__
+komugi\._probe\.__pyx_unpickle_.*
+
+# Same artifacts for the three engine extensions.
+komugi\.engine\.(cyboard|cymovegen|cyengine)\.__pyx_capi__
+komugi\.engine\.(cyboard|cymovegen|cyengine)\.__test__
+komugi\.engine\.(cyboard|cymovegen|cyengine)\.__reduce_cython__
+komugi\.engine\.(cyboard|cymovegen|cyengine)\.__setstate_cython__
+komugi\.engine\.(cyboard|cymovegen|cyengine)\.__pyx_unpickle_.*
+komugi\.engine\.cyboard\.Board\.__reduce_cython__
+komugi\.engine\.cyboard\.Board\.__setstate_cython__
+komugi\.engine\.cyboard\.Board\.__pyx_vtable__
+
+# Module-level `import numpy as np` is an implementation detail of the .pyx,
+# not part of the module's public surface, so it stays out of the stubs.
+komugi\.engine\.(cyboard|cymovegen|cyengine)\.np
+komugi\.engine\.(cyboard|cymovegen|cyengine)\.numpy
+
+# cymovegen/cyengine do `from cyboard import PIECE_TYPES, PIECE_INDEX` for
+# their own use; cyboard is the module that exports them.
+komugi\.engine\.(cymovegen|cyengine)\.PIECE_TYPES
+komugi\.engine\.(cymovegen|cyengine)\.PIECE_INDEX
+komugi\.engine\.cyboard\.Board$

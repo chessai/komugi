@@ -1,0 +1,3 @@
+"""Stub for the compiled komugi._probe extension module (see _probe.pyx)."""
+
+def probe_add(a: int, b: int) -> int: ...
