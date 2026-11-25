@@ -16,6 +16,10 @@ It writes the `onnxruntime-web` build files, one released model (a card,
 its `.onnx`, and `models.json`), and an `ort-assets.json` inventory of the
 `onnxruntime-web` files with their sha256s and sizes.
 
+A project that installs `@komugi-ai/engine` also gets a local `komugi-assets`
+command (for example in an npm script), so the `npx` form above and a direct
+`komugi-assets assets <public-dir> ...` call run the same CLI.
+
 ## 1. Headers
 
 | Extension | Content-Type | Cache-Control |

@@ -531,6 +531,8 @@ COOP/COEP headers and what they trade off, the backend ladder, the
 failure contract, bundle size, the bundler requirement, and a
 step-by-step checklist — is covered end to end in the integration guide:
 [`packages/engine/docs/integration.md`](https://github.com/chessai/komugi/blob/main/packages/engine/docs/integration.md).
+Installing this package also adds a local `komugi-assets` command (for
+example in an npm script) that runs the same CLI the guide's `npx` form does.
 
 ## License
 

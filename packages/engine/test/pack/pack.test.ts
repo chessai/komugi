@@ -86,3 +86,28 @@ test('npm pack ships exactly the public surface (AC2)', () => {
     pack.cleanup();
   }
 });
+
+// With exactly one bin entry, `npx @komugi-ai/engine assets ...` resolves to
+// that single command regardless of its name, which is why the documented
+// npx form keeps working across the komugi-assets rename.
+test('package.json declares exactly one bin entry, komugi-assets, shipped in the tarball', () => {
+  const pkg = JSON.parse(readFileSync(join(ENGINE_DIR, 'package.json'), 'utf8')) as {
+    bin: Record<string, string>;
+  };
+  const binEntries = Object.entries(pkg.bin);
+  assert.equal(binEntries.length, 1, `expected exactly one bin entry, got ${JSON.stringify(pkg.bin)}`);
+  const [[binName, binTarget]] = binEntries;
+  assert.equal(binName, 'komugi-assets');
+  assert.equal(binTarget, './bin/komugi-assets.mjs');
+
+  const pack = npmPack(ENGINE_DIR);
+  try {
+    const fileList = pack.result.files.map((f) => f.path);
+    assert.ok(
+      fileList.includes(binTarget.replace(/^\.\//, '')),
+      `npm pack is missing the bin target ${binTarget}`,
+    );
+  } finally {
+    pack.cleanup();
+  }
+});

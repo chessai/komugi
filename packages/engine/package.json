@@ -1,13 +1,13 @@
 {
   "name": "@komugi-ai/engine",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "license": "MIT",
   "repository": { "type": "git", "url": "git+https://github.com/chessai/komugi.git", "directory": "packages/engine" },
   "publishConfig": { "access": "public" },
   "engines": { "node": ">=20.0.0" },
   "files": ["dist", "bin", "docs", "README.md", "LICENSE", "NOTICE"],
-  "bin": { "engine": "./bin/komugi-assets.mjs" },
+  "bin": { "komugi-assets": "./bin/komugi-assets.mjs" },
   "sideEffects": ["./dist/worker.js"],
   "exports": {
     ".": {
